@@ -25,7 +25,8 @@ This repo is aiming to show how to build the frontend service and works by conne
 - [ ] Admin can add/edit/delete a question
 
 ## Tech Stack
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Typescript](https://www.typescriptlang.org/)-templated.
+1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Typescript](https://www.typescriptlang.org/)-templated.
+2. [Material-UI](https://mui.com/getting-started/usage/): this ui library is one of the most famous ones, developed and maintained by Google. I haven't used this before so I decided to make a new experience with it.
 
 ## Architecture
 
