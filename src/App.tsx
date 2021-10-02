@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, Divider, Grid } from '@mui/material';
 
+import LoginForm from './containers/LoginForm';
+
 function App() {
   return (
     <div>
@@ -9,11 +11,11 @@ function App() {
           <Typography variant="h1">Quiz Time</Typography>
         </Grid>
       </header>
-      <Divider />
-      <section>
+      <Divider sx={{ my: 1 }} />
+      <section style={{ minHeight: '50vh' }}>
         <Grid container alignItems='center' justifyContent='center'>
           <Grid item xs={6}>
-            <Typography variant='body1'>This is for logging in</Typography>
+            <LoginForm />
           </Grid>
         </Grid>
       </section>
