@@ -1,46 +1,43 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+.
 
-## Available Scripts
+# elasticsearch_react
 
-In the project directory, you can run:
+### Contexts
+1. Goal
+2. Features & To do
+3. Tech Stack
+4. How to install
+5. How to run on locally
+6. Reference
 
-### `yarn start`
+## Goal
+This repo is aiming to show how to build the frontend service and works by connecting to [elasticsearch_express](https://github.com/melancholy14/elasticsearch_express)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features & To do
+- [ ] User can log in
+- [ ] User can take questions
+- [ ] User can review the answer is correct after it's submitted
+- [ ] Testing
+- [ ] User can sign up
+- [ ] User can see all questions and answers that s/he resolved
+- [ ] Admin can add/edit/delete a question
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech Stack
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Typescript](https://www.typescriptlang.org/)-templated.
 
-### `yarn test`
+## Architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Case
+This application would be responsible for the client part in the below case:
+![usercase](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgVXNlciBjYXNlCgphY3RvcgAMBQpVc2VyLT5DbGllbnQ6IExvZ2luCgAIBi0-U2VydmVyAA8HIFJlcXVlc3QKbm90ZSByaWdodCBvZiAAHAhjaGVjayBpZiB0aGUgdQBlBm4gbG9nIGluCgBDBgBYDyBSZXNwb25zZQpsb29wIHRha2luZyAAXwVpb25zCiAgICAAehBRABcHAIEECSAgICAAexZmaW5kIGEARwkgZnJvbSBlbGFzdGljc2VhcmNoIHJhbWRvbmx5AGYFAIEUEABgCwCBIAcAgQUMVXNlcjogU2hvdwCBbAUAXQlkYXRhAIE1BQCCSg5TZWxlY3QgYW4gYW5zd2VyIGFuZCBzdWJtaQCBPQYAgmIQQQAgBgCBRCIAgmoNAEsGdGVkAF4IaXMgY29ycmVjdCBvciBub3QAcgZhdmUAgSQFIGluAIIEDgCBdBUAgQMJAIFpHmlmIGl0JwBhEACDQQVhbHQAhA0Gd2FudHMgdG8gdGFrZSBhbm90aGVyAINqCQCDbQUAgioSQ2xpY2sgTmV4AINoBmVsAIMEBwASGERvbgCDJgZlbmQKZW5kCgo&s=qsd)
 
-### `yarn build`
+## How to install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to run on locally
+This step is assuming you already installed `yarn` on your machine. If not, you can use `npm` instead.
+> elasticsearch_react > yarn install
+> elasticsearch_react > yarn start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Reference
