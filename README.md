@@ -1,7 +1,3 @@
-# Getting Started with Create React App
-
-.
-
 # elasticsearch_react
 
 ### Contexts
