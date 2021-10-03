@@ -5,7 +5,11 @@ import { Button, Card, CardActions, CardContent, Divider, FormControl, FormContr
 
 import request from '../utils/request';
 
-function QuizForm() {
+type QuizFormProps = {
+    onReview: () => void;
+}
+
+function QuizForm({ onReview }: QuizFormProps) {
     const [selected, setSelected] = useState<string>('');
     const [isCorrect, setIsCorrect] = useState<boolean>(false);
     const [nextCount, setNextCount] = useState<number>(0);
@@ -94,8 +98,8 @@ function QuizForm() {
                                 <Button onClick={goNext}>
                                     NEXT
                                 </Button>
-                                <Button>
-                                    FINISH
+                                <Button onClick={onReview}>
+                                    REVIEW
                                 </Button>
                             </>
                         )}
@@ -110,12 +114,12 @@ function QuizForm() {
                         <Typography variant='subtitle1'>
                             Congrats!
                             <br />
-                            You resolved all quizzes. Click 'FINISH' to review your answers.
+                            You resolved all quizzes. Click 'REVIEW' to review your answers.
                         </Typography>
                     </CardContent>
                     <CardActions sx={{ justifyContent: 'end' }}>
-                        <Button>
-                            FINISH
+                        <Button onClick={onReview}>
+                            REVIEW
                         </Button>
                     </CardActions>
                 </>

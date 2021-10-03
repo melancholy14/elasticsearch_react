@@ -49,20 +49,20 @@ function LoginForm({ onLogin }: LoginFormProps) {
             }}
             onSubmit={login}
         >
-            <div>
+            <Box>
                 <TextField fullWidth required id='email' label='EMAIL' type='email' value={email} onChange={(ele) => setEmail(ele.target.value)} />
-            </div>
-            <div>
+            </Box>
+            <Box>
                 <TextField fullWidth required id='password' label='PASSWORD' type='password' value={password} onChange={(ele) => setPassword(ele.target.value)} />
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'end', marginTop: '8px' }}>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'end', marginTop: '8px' }}>
                 {error && (<Typography sx={{ color: 'red', mr: 'auto' }}>
                     Given email and password are incorrect. Try again.
                 </Typography>)}
                 <Button type='submit' size='large' variant='contained'>
                     {isLoading ? 'LOADING...' : 'LOGIN'}
                 </Button>
-            </div>
+            </Box>
         </Box>      
     );
 }
