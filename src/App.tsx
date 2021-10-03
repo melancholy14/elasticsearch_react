@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { Typography, Divider, Grid } from '@mui/material';
+import { Box, Typography, Divider, Grid } from '@mui/material';
 
 import LoginForm from './containers/LoginForm';
 import QuizForm from './containers/QuizForm';
@@ -27,14 +27,14 @@ function App() {
           </Grid>
         </header>
         <Divider sx={{ my: 1 }} />
-        <section style={{ minHeight: '50vh' }}>
+        <Box component="section" sx={{ minHeight: '50vh' }}>
           <Grid container alignItems='center' justifyContent='center'>
             <Grid item xs={6}>
               {!isLogin && <LoginForm onLogin={() => setIsLogin(true)} />}
               {isLogin && <QuizForm />}
             </Grid>
           </Grid>
-        </section>
+        </Box>
       </div>
     </QueryClientProvider>
   );
