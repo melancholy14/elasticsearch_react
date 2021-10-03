@@ -7,6 +7,7 @@ import request from '../utils/request';
 
 function ReviewTable() {
     const { isLoading, data } = useQuery('getAllAnswers', async () => {
+        // TODO: Let the backend do this job
         const answers = await request('answers/my');
 
         const questions = await Promise.allSettled(answers.values.map(({ question_id }: { question_id: string }) => request(`questions/${question_id}`)));
