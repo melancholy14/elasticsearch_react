@@ -4,12 +4,14 @@
 1. Goal
 2. Features & To do
 3. Tech Stack
-4. How to install
-5. How to run on locally
-6. Reference
+4. Structure
+5. Use Case
+6. How to install
+7. How to run on locally
+8. Reference
 
 ## Goal
-This repo is aiming to show how to build the frontend service and works by connecting to [elasticsearch_express](https://github.com/melancholy14/elasticsearch_express)
+This repo is aiming to show how to build the very basic and simple frontend service and works by connecting to [elasticsearch_express](https://github.com/melancholy14/elasticsearch_express)
 
 ## Features & To do
 - [ ] User can log in
@@ -22,9 +24,14 @@ This repo is aiming to show how to build the frontend service and works by conne
 
 ## Tech Stack
 1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Typescript](https://www.typescriptlang.org/)-templated.
-2. [Material-UI](https://mui.com/getting-started/usage/): this ui library is one of the most famous ones, developed and maintained by Google. I haven't used this before so I decided to make a new experience with it.
+2. [Material-UI](https://mui.com/getting-started/usage/): This ui library is one of the most famous ones, developed and maintained by Google. I haven't used this before so I decided to make a new experience with it.
+3. [React-Query](https://react-query.tanstack.com/overview): This out-of-box data-fetching library helps developers not only communicating with the backend but also caching, synchronizing and updating server state
 
-## Architecture
+## My Choices
+- No Routing
+- No Redux
+
+## Structure
 
 ### User Case
 This application would be responsible for the client part in the below case:
@@ -34,7 +41,9 @@ This application would be responsible for the client part in the below case:
 
 ## How to run on locally
 This step is assuming you already installed `yarn` on your machine. If not, you can use `npm` instead.
+
 > elasticsearch_react > yarn install
+
 > elasticsearch_react > yarn start
 
 ## Reference
