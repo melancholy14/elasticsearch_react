@@ -13,6 +13,8 @@ async function request(url: string, options?: { method?: 'get' | 'post', headers
         ...headers
     };
 
+    delete updatedHeaders[''];  // Should be deleted { key: '' } before requesting
+
     const response = await fetch(`${apiUrl}/${url}`, {
         method,
         headers: updatedHeaders,
