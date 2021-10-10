@@ -14,7 +14,7 @@ function LoginForm({ onLogin }: LoginFormProps) {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
-    const mutation = useMutation(() => {
+    const { mutate: usersLogin, isLoading, error } = useMutation(() => {
         return request('users/login', {
             method: 'post',
             headers: {
@@ -26,9 +26,9 @@ function LoginForm({ onLogin }: LoginFormProps) {
             console.error(err);
         },
         onSuccess: (response) => {
-            const { data } = response;
+            const { id } = response;
             
-            setUid(data.id);
+            setUid(id);
 
             onLogin();
         }
@@ -37,7 +37,7 @@ function LoginForm({ onLogin }: LoginFormProps) {
     const login = (event: FormEvent) => {
         event.preventDefault();
 
-        mutation.mutate();
+        usersLogin();
     }
 
     return (
@@ -49,20 +49,20 @@ function LoginForm({ onLogin }: LoginFormProps) {
             }}
             onSubmit={login}
         >
-            <div>
+            <Box>
                 <TextField fullWidth required id='email' label='EMAIL' type='email' value={email} onChange={(ele) => setEmail(ele.target.value)} />
-            </div>
-            <div>
+            </Box>
+            <Box>
                 <TextField fullWidth required id='password' label='PASSWORD' type='password' value={password} onChange={(ele) => setPassword(ele.target.value)} />
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'end', marginTop: '8px' }}>
-                {mutation.error && (<Typography variant='body1'>
-                    Something went wrong. Try again.
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'end', marginTop: '8px' }}>
+                {error && (<Typography sx={{ color: 'red', mr: 'auto' }}>
+                    Given email and password are incorrect. Try again.
                 </Typography>)}
                 <Button type='submit' size='large' variant='contained'>
-                    {mutation.isLoading ? 'Loading...' : 'LOGIN'}
+                    {isLoading ? 'LOADING...' : 'LOGIN'}
                 </Button>
-            </div>
+            </Box>
         </Box>      
     );
 }

@@ -14,12 +14,12 @@
 This repo is aiming to show how to build the very basic and simple frontend service and works by connecting to [elasticsearch_express](https://github.com/melancholy14/elasticsearch_express)
 
 ## Features & To do
-- [ ] User can log in
-- [ ] User can take questions
-- [ ] User can review the answer is correct after it's submitted
+- [x] User can log in: [PR#2](https://github.com/melancholy14/elasticsearch_react/pull/2)
+- [x] User can take questions: [PR#3](https://github.com/melancholy14/elasticsearch_react/pull/3)
+- [x] User can review the answer is correct after it's submitted: [PR#3](https://github.com/melancholy14/elasticsearch_react/pull/3)
 - [ ] Testing
 - [ ] User can sign up
-- [ ] User can see all questions and answers that s/he resolved
+- [x] User can see all questions and answers that s/he resolved: [PR#4](https://github.com/melancholy14/elasticsearch_react/pull/4)
 - [ ] Admin can add/edit/delete a question
 
 ## Tech Stack
@@ -29,9 +29,13 @@ This repo is aiming to show how to build the very basic and simple frontend serv
 
 ## My Choices
 - No Routing
-- No Redux
+  1. The user flow of this app is quite simple, "log in -> take a quiz -> review -> log out", and one page would be enough to display all steps using `useState`.
+  2. Personally, I wanted to avoid additional minor tasks since having routing would give me another task such as authenticating when users access through a different path, not login.
+- No Redux: This simple app does not require saving much data in a single source of storage, which means it's enough to use the cookie. [`Redux`](https://react-redux.js.org/) would be added once the app's scale becomes enlarged.
 
 ## Structure
+- `containers`
+- `utils`
 
 ### User Case
 This application would be responsible for the client part in the below case:
