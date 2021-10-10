@@ -1,6 +1,6 @@
 import { getUid } from './cookies';
 
-const apiUrl = 'http://3.34.132.219';
+const apiUrl = 'https://prototype.dev.testglider.com';
 
 async function request(url: string, options?: { method?: 'get' | 'post', headers?: Record<string, any>, data?: Record<string, any> }) {
     const { method = 'get', headers = {}, data } = options || {};
